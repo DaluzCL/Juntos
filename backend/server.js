@@ -26,8 +26,9 @@ app.use('/api/metas', metas);
 app.use('/api/orcamentos', orcamentos);
 app.use('/api/resumo', resumo);
 
-export default app;
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando na porta ${PORT}`);
 });
+
+export default app;
