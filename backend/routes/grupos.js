@@ -1,6 +1,7 @@
 import express from 'express';
 import crypto from 'crypto';
 import authenticateToken from '../middleware/authMiddleware.js';
+import verificarGrupo  from '../middleware/verificarGrupo.js';
 import db from '../banco.js';
 
 
