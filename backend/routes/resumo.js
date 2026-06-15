@@ -12,6 +12,8 @@ const mesAnoAtual = `${anoAtual}-${mesAtual}`;
 
 // Rota para obter o resumo financeiro do mês atual
 router.get('/', authenticateToken, verificarGrupo, (req, res) => {
+   // console.log(req.usuario, req.usuario); // Verifique se o usuário autenticado está presente
+   // console.log(mesAnoAtual, mesAnoAtual); // Verifique se a variável mesAnoAtual está correta
     try {
         const resumo = db.prepare(`
             SELECT 
