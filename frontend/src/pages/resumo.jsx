@@ -21,12 +21,27 @@ function Resumo() {
     }
 
     return (
-        <div>
-            <h1>Resumo</h1>
-            <p>Entradas: {resumo.entradas}</p>
-            <p>Saidas: {resumo.saidas}</p>
-            <p>Saldo: {resumo.saldo}</p>
+        <div className="min-h-screen bg-gray-900 p-8">
+            <h1 className="text-3xl font-bold text-white mb-6">Resumo do Mês</h1>
+
+            <div className="grid grid-cols-3 gap-4">
+                <div className="bg-gray-800 p-6 rounded-xl">
+                    <p className="text-gray-400 text-sm">Saldo Total</p>
+                    <p className="text-white text-2xl font-bold">R$ {resumo.saldo}</p>
+                </div>
+                <div className="bg-gray-800 p-6 rounded-xl">
+                    <p className="text-gray-400 text-sm">Total de Entradas</p>
+                    <p className="text-green-400 text-2xl font-bold">R$ {resumo.entradas}</p>
+                </div>
+                <div className="bg-gray-800 p-6 rounded-xl">
+                    <p className="text-gray-400 text-sm">Total de Saídas</p>
+                    <p className="text-red-400 text-2xl font-bold">R$ {resumo.saidas}</p>
+                </div>
+            </div>
+          
         </div>
+
+
     );
 }
 
