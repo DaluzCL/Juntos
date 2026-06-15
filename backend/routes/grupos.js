@@ -41,7 +41,7 @@ router.post('/entrar', authenticateToken, (req, res) => {
 router.get('/', authenticateToken, (req, res) => {
     const userId = req.user.id;
     const stmt = db.prepare('SELECT * FROM Grupos WHERE id = (SELECT grupo_id FROM Usuarios WHERE id = ?)');
-    const grupo = stmt.get(userId);
+    const grupo = stmt.get(userId); 
     res.json(grupo);
 });
 

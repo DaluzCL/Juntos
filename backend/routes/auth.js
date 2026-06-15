@@ -14,12 +14,14 @@ router.post('/register', async (req, res) => {
       return res.status(400).json({ message: "Email already exists" });
     } else {
         const user = await registerUser(nome, email, senha);
-        res.status(201).json({ id: user, message: "User registered successfully" });
+        const token = await loginUser(email, senha);
+      res.status(201).json({ token, user: {id: user, nome, email} });
     }
   } catch (error) {
     res.status(500).json({ message: "Server error" });
   }
 });
+
 
 // Login do usuário
 router.post('/login', async (req, res) => {
