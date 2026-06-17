@@ -1,4 +1,5 @@
 import { useState, useEffect} from "react";
+import BottomNav from "../components/BottomNav";
 import api from "../services/api";
 
 
@@ -38,7 +39,7 @@ function Resumo() {
                     <p className="text-red-400 text-2xl font-bold">R$ {resumo.saidas}</p>
                 </div>
             </div>
-          
+          <BottomNav />
         </div>
 
 
