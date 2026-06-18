@@ -3,6 +3,7 @@ import Login from './pages/login'
 import Cadastro from './pages/cadastro';
 import Grupos from './pages/Grupos';
 import Resumo from './pages/resumo';
+import Transacoes from './pages/transacoes';
 import RotaProtegida from './components/RotaProtegida';
 
 
@@ -14,6 +15,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/resumo" element={<RotaProtegida><Resumo /></RotaProtegida>} /> 
+        <Route path="/transacoes" element={<RotaProtegida><Transacoes /></RotaProtegida>} />
         <Route path="/grupos" element={<RotaProtegida><Grupos /></RotaProtegida>} /> 
       </Routes>
     </BrowserRouter>

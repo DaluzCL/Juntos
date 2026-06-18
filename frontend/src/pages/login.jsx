@@ -19,7 +19,7 @@ const handleLogin = async () => {
 }
 
     return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
         <div className="bg-gray-800 p-8 rounded-xl w-full max-w-md">
             <h1 className="text-white text-2xl font-bold mb-6">Entrar no Juntos</h1>
     
@@ -37,6 +37,7 @@ const handleLogin = async () => {
     placeholder="Sua senha"
     value={senha}
     onChange={(e) => setSenha(e.target.value)}
+    onKeyDown={(e) => e.key === 'Enter' && handleLogin()}
     className="w-full bg-gray-700 text-white px-4 py-2 rounded-lg mb-4"
     />
 

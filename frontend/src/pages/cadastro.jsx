@@ -20,7 +20,7 @@ const handleCadastro = async () => {
 }
 
     return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
         <div className="bg-gray-800 p-8 rounded-xl w-full max-w-md">
             <h1 className="text-white text-2xl font-bold mb-6">Criar conta</h1>
     

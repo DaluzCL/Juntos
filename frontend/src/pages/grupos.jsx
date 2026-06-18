@@ -42,16 +42,15 @@ function Grupos() {
 
 
         return (
-            <div className="min-h-screen bg-gray-900 flex items-center justify-center">
+            <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
                 <div className="bg-gray-800 p-8 rounded-xl w-full max-w-md">
                     <h1 className="text-white text-2xl font-bold mb-6">Grupos</h1>
-                    <p className='text-white text-1xl font-bold mb-6'>Para continuar, crie um grupo ou entre em um existente usando o código de convite.</p>
+                    <p className='text-gray-400 text-sm mb-6'>Para continuar, crie um grupo ou entre em um existente usando o código de convite.</p>
 
-                    
-           
-        <button onClick={() => setModal('criar')} className='bg-purple-600 text-white px-4 py-2 rounded'>Criar Grupo</button>
-
-        <button onClick={() => setModal('entrar')} className='bg-purple-600 text-white px-4 py-2 rounded ml-4'>Entrar com código</button>
+    <div className='flex flex-col gap-4'>
+        <button onClick={() => setModal('criar')} className='bg-purple-600 text-white px-4 py-2 rounded w-full'>Criar Grupo</button>
+        <button onClick={() => setModal('entrar')} className='bg-purple-600 text-white px-4 py-2 rounded w-full'>Entrar com código</button>
+    </div>
 
         {modal === 'criar' && (
             <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center'>

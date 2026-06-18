@@ -28,7 +28,7 @@ function Resumo() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-900 p-8">
+        <div className="min-h-screen bg-gray-900 p-8 pb-24">
             <h1 className="text-3xl font-bold text-white mb-6">Resumo do Mês</h1>
 
             <div className="grid grid-cols-3 gap-4">
