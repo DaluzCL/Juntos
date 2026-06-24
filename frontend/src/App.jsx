@@ -5,6 +5,7 @@ import Grupos from './pages/Grupos';
 import Resumo from './pages/resumo';
 import Transacoes from './pages/transacoes';
 import Metas from './pages/metas';
+import Membros from './pages/membros';
 import RotaProtegida from './components/RotaProtegida';
 
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/transacoes" element={<RotaProtegida><Transacoes /></RotaProtegida>} />
         <Route path="/grupos" element={<RotaProtegida><Grupos /></RotaProtegida>} /> 
         <Route path="/metas" element={<RotaProtegida><Metas /></RotaProtegida>} />
+        <Route path="/membros" element={<RotaProtegida><Membros /></RotaProtegida>} />
       </Routes>
     </BrowserRouter>
   );

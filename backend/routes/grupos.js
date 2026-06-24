@@ -45,6 +45,15 @@ router.get('/', authenticateToken, (req, res) => {
     res.json(grupo);
 });
 
+//Rota para listar os usuários do grupo na page Membros
+router.get('/membros', authenticateToken, verificarGrupo, (req, res) => {
+    try {
+    const usuarios = db.prepare('SELECT id, nome, email FROM Usuarios WHERE grupo_id = ?').all(req.usuario.grupo_id);
+    res.json(usuarios);
+    } catch (error) {
+        res.status(500).json({ error:"Erro ao encontrar usuários do Grupo!"});
+    }
+})
 
 
 
