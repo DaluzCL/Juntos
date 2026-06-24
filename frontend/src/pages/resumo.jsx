@@ -48,7 +48,7 @@ function Resumo() {
         
         <div className="mt-8">
             <h2 className="text-2xl font-bold text-white mb-4">Transações Recentes</h2>
-            {transacoes.slice(0, 5).map((t) => (
+            {transacoes.slice().reverse().slice(0, 5).map((t) => (
                 <div key={t.id} className="bg-gray-800 p-4 rounded-xl mb-2 flex justify-between">
                     <span className="text-white">{t.descricao}</span>
                     <span className={t.tipo === 'Entrada' ? 'text-green-400' : 'text-red-400'}>R$ {t.valor}</span>
