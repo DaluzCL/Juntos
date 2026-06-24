@@ -23,9 +23,6 @@ function Resumo() {
     buscarResumo();
 }, []);
 
-    if (!resumo) {
-        return <div>Carregando...</div>;
-    }
 
     return (
         <div className="min-h-screen bg-gray-900 p-8 pb-24">
