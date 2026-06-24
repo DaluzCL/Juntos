@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './pages/login'
 import Cadastro from './pages/cadastro';
-import Grupos from './pages/Grupos';
+import Grupos from './pages/grupos';
 import Resumo from './pages/resumo';
 import Transacoes from './pages/transacoes';
 import Metas from './pages/metas';
